@@ -1,0 +1,20 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL	604800
+@	IN	SOA	ubuntu1.com. root.ubuntu1.com. (
+			      1		; Serial
+			 604800		; Refresh
+			  86400		; Retry
+			2419200		; Expire
+			 604800 )	; Negative Cache TTL
+;
+
+;name servers
+	IN	NS	ns1.ubuntu1.com.
+	IN	NS	ns2.ubuntu1.com.
+
+;ptr records
+10	IN	PTR	ns1.ubuntu1.com.
+11	IN	PTR	ns2.ubuntu1.com.
+5	IN	PTR	www.ubuntu1.com.
